@@ -1,11 +1,329 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        日本株の<span class="accent">割安銘柄</span>を<br />
+        見つけてLINEで通知
+      </h1>
+      <p class="hero-description">
+        StockSenseは、日本の個別株を分析し、<br class="sp-only" />
+        中期〜長期投資向けの割安銘柄をLINEでお届けするサービスです。
+      </p>
+      <a href="#line-connect" class="cta-button">
+        LINEで始める
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">特徴</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>多角的なスコアリング</h3>
+          <p>PER・PBRなどの指標、相対的な値位置、業績による罠株除去など多角的に分析します。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>定期LINE通知</h3>
+          <p>中期向け情報は毎週月曜朝に、長期向け情報は月初に通知します。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🇯🇵</div>
+          <h3>日本株特化</h3>
+          <p>日本の個別株に特化した分析で、国内投資家をサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">こんな方におすすめ</h2>
+      <div class="use-cases">
+        <div class="use-case">
+          <span class="use-case-icon">👤</span>
+          <div>
+            <h3>忙しくて銘柄分析の時間がない方</h3>
+            <p>定期的に割安銘柄をお届けするので、分析の手間を省けます。</p>
+          </div>
+        </div>
+        <div class="use-case">
+          <span class="use-case-icon">📈</span>
+          <div>
+            <h3>投資のきっかけを探している方</h3>
+            <p>割安銘柄の情報を参考に、投資検討のヒントを得られます。</p>
+          </div>
+        </div>
+        <div class="use-case">
+          <span class="use-case-icon">🔍</span>
+          <div>
+            <h3>新しい銘柄を発掘したい方</h3>
+            <p>普段チェックしていない銘柄との出会いを提供します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINE Connect Section -->
+  <section class="section" id="line-connect">
+    <div class="container">
+      <h2 class="section-title">LINEで始める</h2>
+      <div class="line-connect">
+        <div class="qr-code">
+          <img src="/LINE_QR_CODE.png" alt="LINE友だち追加QRコード" width="200" height="200" />
+        </div>
+        <div class="line-connect-text">
+          <p>QRコードを読み取って<br />友だち追加するだけで利用開始できます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer Section -->
+  <section class="section disclaimer-section">
+    <div class="container">
+      <h2 class="section-title">ご注意事項</h2>
+      <div class="disclaimer-content">
+        <p>
+          本サービスは投資に関する情報提供を目的としており、
+          <strong>投資助言や投資勧誘を行うものではありません。</strong>
+        </p>
+        <p>
+          掲載される情報は参考情報としてご利用ください。
+          投資に関する最終的な判断は、ご自身の責任において行ってください。
+        </p>
+        <p>
+          株式投資にはリスクが伴います。
+          元本割れの可能性があることをご理解の上、ご利用ください。
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background: linear-gradient(180deg, var(--color-background) 0%, #3a3a3a 100%);
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .accent {
+    color: var(--color-accent);
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .sp-only {
+    display: none;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: #333;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cta-button:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(233, 243, 85, 0.3);
+  }
+
+  .section {
+    padding: 5rem 1.5rem;
+  }
+
+  .section-alt {
+    background-color: #3d3d3d;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Features */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background-color: var(--color-background-light);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Use Cases */
+  .use-cases {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .use-case {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background-color: var(--color-background);
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .use-case-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .use-case h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .use-case p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* LINE Connect */
+  .line-connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .qr-code {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .qr-code img {
+    display: block;
+    border-radius: 8px;
+  }
+
+  .line-connect-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  /* Disclaimer */
+  .disclaimer-section {
+    background-color: #3a3a3a;
+  }
+
+  .disclaimer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-background);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+  }
+
+  .disclaimer-content p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .disclaimer-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .disclaimer-content strong {
+    color: var(--color-text);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .sp-only {
+      display: inline;
+    }
+
+    .features {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .use-case {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
