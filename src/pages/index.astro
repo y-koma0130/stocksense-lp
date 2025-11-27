@@ -6,6 +6,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
+      <img src="/Logo.svg" alt="StockSense" class="hero-logo" />
       <h1>
         日本株の<span class="accent">割安銘柄</span>を<br />
         見つけてLINEで通知
@@ -38,7 +39,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="feature-card">
           <div class="feature-icon">🇯🇵</div>
           <h3>日本株特化</h3>
-          <p>日本の個別株に特化した分析で、国内投資家をサポートします。</p>
+          <p>国内個別株に特化した分析で、国内投資家をサポートします。</p>
         </div>
       </div>
     </div>
@@ -120,6 +121,11 @@ import Layout from '../layouts/Layout.astro';
     text-align: center;
     padding: 4rem 1.5rem;
     background: linear-gradient(180deg, var(--color-background) 0%, #3a3a3a 100%);
+  }
+
+  .hero-logo {
+    height: 48px;
+    margin-bottom: 1.5rem;
   }
 
   .hero-content h1 {
@@ -298,8 +304,18 @@ import Layout from '../layouts/Layout.astro';
     color: var(--color-text);
   }
 
-  /* Responsive */
+  /* Responsive - Tablet */
   @media (max-width: 768px) {
+    .hero {
+      min-height: 60vh;
+      padding: 3rem 1rem;
+    }
+
+    .hero-logo {
+      height: 40px;
+      margin-bottom: 1.25rem;
+    }
+
     .hero-content h1 {
       font-size: 1.8rem;
     }
@@ -312,18 +328,141 @@ import Layout from '../layouts/Layout.astro';
       display: inline;
     }
 
+    .cta-button {
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+    }
+
     .features {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      padding: 1.5rem;
     }
 
     .section-title {
       font-size: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .use-case {
-      flex-direction: column;
+      padding: 1.25rem;
+    }
+
+    .use-case h3 {
+      font-size: 1rem;
+    }
+
+    .use-case p {
+      font-size: 0.85rem;
+    }
+
+    .qr-code img {
+      width: 180px;
+      height: 180px;
+    }
+
+    .disclaimer-content {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Responsive - Mobile */
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 50vh;
+      padding: 2rem 1rem;
+    }
+
+    .hero-logo {
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content h1 {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .hero-description {
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .cta-button {
+      padding: 0.75rem 1.75rem;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .section {
+      padding: 2.5rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card {
+      padding: 1.25rem;
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+    }
+
+    .use-case {
+      padding: 1rem;
       gap: 1rem;
-      text-align: center;
+    }
+
+    .use-case-icon {
+      font-size: 1.5rem;
+    }
+
+    .use-case h3 {
+      font-size: 0.95rem;
+    }
+
+    .use-case p {
+      font-size: 0.8rem;
+    }
+
+    .qr-code {
+      padding: 0.75rem;
+    }
+
+    .qr-code img {
+      width: 160px;
+      height: 160px;
+    }
+
+    .line-connect-text p {
+      font-size: 1rem;
+    }
+
+    .disclaimer-content {
+      padding: 1.25rem;
+    }
+
+    .disclaimer-content p {
+      font-size: 0.9rem;
     }
   }
 </style>

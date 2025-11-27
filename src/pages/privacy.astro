@@ -153,12 +153,72 @@ import Layout from '../layouts/Layout.astro';
   }
 
   @media (max-width: 768px) {
+    .page-container {
+      padding: 2rem 1rem;
+    }
+
     h1 {
       font-size: 1.5rem;
     }
 
     .content h2 {
       font-size: 1.1rem;
+      margin-top: 2rem;
+    }
+
+    .content h3 {
+      font-size: 0.95rem;
+    }
+
+    .content p {
+      font-size: 0.9rem;
+    }
+
+    .content ol,
+    .content ul {
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-container {
+      padding: 1.5rem 1rem;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    .updated {
+      font-size: 0.8rem;
+    }
+
+    .content {
+      line-height: 1.7;
+    }
+
+    .content h2 {
+      font-size: 1rem;
+      margin-top: 1.75rem;
+    }
+
+    .content h3 {
+      font-size: 0.9rem;
+    }
+
+    .content p {
+      font-size: 0.85rem;
+    }
+
+    .content ol,
+    .content ul {
+      padding-left: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .content li {
+      margin-bottom: 0.4rem;
     }
   }
 </style>
