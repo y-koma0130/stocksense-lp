@@ -19,6 +19,14 @@ const {
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSH1LWD4XF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WSH1LWD4XF');
+    </script>
   </head>
   <body>
     <header class="header">
@@ -201,7 +209,7 @@ const {
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 320px) {
     .header-inner {
       flex-direction: column;
       gap: 0.5rem;
