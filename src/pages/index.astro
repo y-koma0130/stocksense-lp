@@ -21,8 +21,17 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Screenshot Section -->
+  <section class="screenshot-section">
+    <div class="container">
+      <div class="screenshot-wrapper">
+        <img src="/ServiceImage.png" alt="StockSenseの画面イメージ - 割安株スコア一覧とAI分析レポート" class="screenshot" />
+      </div>
+    </div>
+  </section>
+
   <!-- Features Section -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <h2 class="section-title">特徴</h2>
       <div class="features">
@@ -30,6 +39,11 @@ import Layout from '../layouts/Layout.astro';
           <div class="feature-icon">📊</div>
           <h3>多角的なスコアリング</h3>
           <p>PER・PBRなどの指標、相対的な値位置、業績による罠株除去など多角的に分析します。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AIによる個別分析</h3>
+          <p>上位5銘柄に対してAIが詳細分析。おすすめ度・投資魅力ポイント・注意すべきリスクをレポートします。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔔</div>
@@ -46,7 +60,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Use Cases Section -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <h2 class="section-title">こんな方におすすめ</h2>
       <div class="use-cases">
@@ -54,21 +68,21 @@ import Layout from '../layouts/Layout.astro';
           <span class="use-case-icon">👤</span>
           <div>
             <h3>忙しくて銘柄分析の時間がない方</h3>
-            <p>定期的に割安銘柄をお届けするので、分析の手間を省けます。</p>
+            <p>数千銘柄を自動でスクリーニングし、割安銘柄を厳選してお届け。毎週・毎月の通知で情報収集の手間を省けます。</p>
           </div>
         </div>
         <div class="use-case">
           <span class="use-case-icon">📈</span>
           <div>
-            <h3>投資のきっかけを探している方</h3>
-            <p>割安銘柄の情報を参考に、投資検討のヒントを得られます。</p>
+            <h3>中長期投資を始めたい方</h3>
+            <p>短期の値動きではなく、ファンダメンタルズに基づいた割安銘柄を提供。じっくり投資を検討したい方に最適です。</p>
           </div>
         </div>
         <div class="use-case">
           <span class="use-case-icon">🔍</span>
           <div>
             <h3>新しい銘柄を発掘したい方</h3>
-            <p>普段チェックしていない銘柄との出会いを提供します。</p>
+            <p>普段チェックしていない銘柄との出会いを提供。AI分析レポートで、なぜ注目すべきかの理由も確認できます。</p>
           </div>
         </div>
       </div>
@@ -186,10 +200,30 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 3rem;
   }
 
+  /* Screenshot */
+  .screenshot-section {
+    background: linear-gradient(180deg, #3a3a3a 0%, var(--color-background) 100%);
+    padding: 0 1.5rem 4rem;
+  }
+
+  .screenshot-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* Features */
   .features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
@@ -351,6 +385,14 @@ import Layout from '../layouts/Layout.astro';
       margin-bottom: 2rem;
     }
 
+    .screenshot-section {
+      padding: 0 1rem 3rem;
+    }
+
+    .screenshot-wrapper {
+      border-radius: 8px;
+    }
+
     .use-case {
       padding: 1.25rem;
     }
@@ -409,6 +451,10 @@ import Layout from '../layouts/Layout.astro';
     .section-title {
       font-size: 1.3rem;
       margin-bottom: 1.5rem;
+    }
+
+    .screenshot-section {
+      padding: 0 1rem 2.5rem;
     }
 
     .feature-card {
