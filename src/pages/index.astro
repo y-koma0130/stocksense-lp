@@ -90,9 +90,28 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- LINE Connect Section -->
-  <section class="section" id="line-connect">
+  <section class="section section-alt" id="line-connect">
     <div class="container">
       <h2 class="section-title">LINEで始める</h2>
+      <p class="section-subtitle">LINE友だち限定で下記の機能が利用できます。</p>
+
+      <div class="line-features">
+        <div class="line-feature">
+          <div class="line-feature-icon">📩</div>
+          <div class="line-feature-content">
+            <h3>定期通知</h3>
+            <p>割安株ランキングを毎週月曜・月初にお届け。マーケットサマリーで市況の要点も配信します。</p>
+          </div>
+        </div>
+        <div class="line-feature">
+          <div class="line-feature-icon">💬</div>
+          <div class="line-feature-content">
+            <h3>チャットで銘柄分析</h3>
+            <p>銘柄コードを送るだけで、AIがバリュー株としての分析レポートを即時作成。気になる銘柄をいつでもチェックできます。</p>
+          </div>
+        </div>
+      </div>
+
       <div class="line-connect">
         <div class="qr-code">
           <img src="/LINE_QR_CODE.png" alt="LINE友だち追加QRコード" width="200" height="200" />
@@ -285,6 +304,49 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* LINE Connect */
+  .section-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-top: -2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .line-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+
+  .line-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: var(--color-background);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-accent);
+  }
+
+  .line-feature-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+  }
+
+  .line-feature-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+  }
+
+  .line-feature-content p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
   .line-connect {
     display: flex;
     flex-direction: column;
@@ -385,6 +447,22 @@ import Layout from '../layouts/Layout.astro';
       margin-bottom: 2rem;
     }
 
+    .section-subtitle {
+      margin-top: -1.5rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .line-features {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .line-feature {
+      padding: 1.25rem;
+    }
+
     .screenshot-section {
       padding: 0 1rem 3rem;
     }
@@ -451,6 +529,33 @@ import Layout from '../layouts/Layout.astro';
     .section-title {
       font-size: 1.3rem;
       margin-bottom: 1.5rem;
+    }
+
+    .section-subtitle {
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .line-features {
+      margin-bottom: 2rem;
+    }
+
+    .line-feature {
+      padding: 1rem;
+      gap: 0.75rem;
+    }
+
+    .line-feature-icon {
+      font-size: 1.5rem;
+    }
+
+    .line-feature-content h3 {
+      font-size: 1rem;
+    }
+
+    .line-feature-content p {
+      font-size: 0.85rem;
     }
 
     .screenshot-section {
