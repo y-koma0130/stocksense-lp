@@ -1,8 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "StockSense",
+  "url": "https://lp.stocksense-app.com",
+  "description": "日本の個別株の割安銘柄を分析し、中期〜長期投資向けにLINEで通知するサービスです。",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "StockSense運営"
+  }
+};
 ---
 
-<Layout>
+<Layout canonicalPath="/">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
